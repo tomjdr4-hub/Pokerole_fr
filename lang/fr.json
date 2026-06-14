@@ -209,5 +209,13 @@
   "POKEROLE.CombatNextRoundDialogContent": "Commencer le tour suivant et réinitialiser les compteurs d'actions de tous les participants ?",
 
   "POKEROLE.SheetModeEdit": "Mode édition",
-  "POKEROLE.SheetModePlay": "Mode jeu"
+  "POKEROLE.SheetModePlay": "Mode jeu",
+
+  "POKEROLE.TabAttributes": "Attributs",
+  "POKEROLE.TabMoves": "Capacités",
+  "POKEROLE.TabItems": "Objets",
+  "POKEROLE.TabEffects": "Effets",
+  "POKEROLE.TabBiography": "Biographie",
+
+  "POKEROLE.TrainingPoints": "Points d'entraînement"
 }

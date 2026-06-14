@@ -209,5 +209,13 @@
   "POKEROLE.CombatNextRoundDialogContent": "Start the next round and reset all participants' action counters?",
 
   "POKEROLE.SheetModeEdit": "Edit Mode",
-  "POKEROLE.SheetModePlay": "Play Mode"
+  "POKEROLE.SheetModePlay": "Play Mode",
+
+  "POKEROLE.TabAttributes": "Attributes",
+  "POKEROLE.TabMoves": "Moves",
+  "POKEROLE.TabItems": "Items",
+  "POKEROLE.TabEffects": "Effects",
+  "POKEROLE.TabBiography": "Biography",
+
+  "POKEROLE.TrainingPoints": "Training Points"
 }

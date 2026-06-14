@@ -317,11 +317,11 @@ export class PokeroleActorSheet extends foundry.applications.api.HandlebarsAppli
    */
   _getTabs() {
     const tabs = [
-      { id: "attributes", group: "primary", icon: "fa-solid fa-user", label: "Attributes" },
-      { id: "moves", group: "primary", icon: "fa-solid fa-fist-raised", label: "Moves" },
-      { id: "items", group: "primary", icon: "fa-solid fa-suitcase", label: "Items" },
-      { id: "effects", group: "primary", icon: "fa-solid fa-bolt", label: "Effects" },
-      { id: "biography", group: "primary", icon: "fa-solid fa-book", label: "Biography" }
+      { id: "attributes", group: "primary", icon: "fa-solid fa-user", label: game.i18n.localize("POKEROLE.TabAttributes") },
+      { id: "moves", group: "primary", icon: "fa-solid fa-fist-raised", label: game.i18n.localize("POKEROLE.TabMoves") },
+      { id: "items", group: "primary", icon: "fa-solid fa-suitcase", label: game.i18n.localize("POKEROLE.TabItems") },
+      { id: "effects", group: "primary", icon: "fa-solid fa-bolt", label: game.i18n.localize("POKEROLE.TabEffects") },
+      { id: "biography", group: "primary", icon: "fa-solid fa-book", label: game.i18n.localize("POKEROLE.TabBiography") }
     ];
 
     const tabsObject = {};

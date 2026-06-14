@@ -50,7 +50,7 @@ Hooks.once('init', async () => {
   CONFIG.ui.combat = PokeroleCombatTracker;
 
   // Register sheet application classes
-  foundry.documents.collections.Actors.registerSheet("pokerole", PokeroleActorSheet, { makeDefault: true });
+  foundry.documents.collections.Actors.registerSheet("pokerole", PokeroleActorSheet, { types: ["pokemon", "trainer"], makeDefault: true });
 
   foundry.documents.collections.Items.registerSheet("pokerole", PokeroleAbilitySheet, { 
     types: ["ability"], 
