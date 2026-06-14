@@ -3,13 +3,13 @@
   {{#if owned}}
   {{#unless system.attributes.maneuver}}
   <div class="form-group">
-    <label class="resource-label">Learned?</label>
+    <label class="resource-label">{{localize "POKEROLE.MoveAttrLearned"}}</label>
     <input type="checkbox" name="system.learned" {{checked system.learned}} data-dtype="Boolean">
   </div>
 
   {{#unless system.learned}}
   <div class="form-group">
-    <label class="resource-label">Learned at Rank</label>
+    <label class="resource-label">{{localize "POKEROLE.MoveAttrLearnedAtRank"}}</label>
     <select name="system.rank" value="{{system.rank}}" data-dtype="String">
       {{selectOptions ranks selected=system.rank}}
     </select>
@@ -18,7 +18,7 @@
 
   {{#if system.learned}}
   <div class="form-group">
-    <label class="resource-label">Overrank Move?</label>
+    <label class="resource-label">{{localize "POKEROLE.MoveAttrOverrank"}}</label>
     <input type="checkbox" name="system.overrank" {{checked system.overrank}} data-dtype="Boolean">
   </div>
   {{/if}}
@@ -28,85 +28,85 @@
   {{/if}}
 
   <div class="form-group">
-    <label class="resource-label">Type</label>
+    <label class="resource-label">{{localize "POKEROLE.MoveAttrType"}}</label>
     <select name="system.type" value="{{system.type}}" data-dtype="String">
       {{selectOptions types selected=system.type}}
     </select>
   </div>
   <div class="form-group">
-    <label class="resource-label">Category</label>
+    <label class="resource-label">{{localize "POKEROLE.MoveAttrCategory"}}</label>
     <select name="system.category" value="{{system.category}}" data-dtype="String">
       {{selectOptions categories selected=system.category}}
     </select>
   </div>
   <div class="form-group">
-    <label class="resource-label">Target</label>
+    <label class="resource-label">{{localize "POKEROLE.MoveAttrTarget"}}</label>
     <select name="system.target" value="{{system.target}}" data-dtype="String">
       {{selectOptions targets selected=system.target}}
     </select>
   </div>
   <div class="form-group">
-    <label class="resource-label">Power</label>
+    <label class="resource-label">{{localize "POKEROLE.MoveAttrPower"}}</label>
     <input type="text" name="system.power" value="{{system.power}}" data-dtype="Number"/>
   </div>
   <div class="form-group alternative-stat">
-    <label class="resource-label">Accuracy Modifiers (Attribute)</label>
+    <label class="resource-label">{{localize "POKEROLE.MoveAttrAccAttr"}}</label>
     <input type="text" name="system.accAttr1" value="{{system.accAttr1}}" data-dtype="String">
     <label>/</label>
     <input type="text" name="system.accAttr1var" value="{{system.accAttr1var}}" data-dtype="String">
   </div>
   <div class="form-group alternative-stat">
-    <label class="resource-label">Accuracy Modifiers (Skill)</label>
+    <label class="resource-label">{{localize "POKEROLE.MoveAttrAccSkill"}}</label>
     <input type="text" name="system.accSkill1" value="{{system.accSkill1}}" data-dtype="String">
     <label>/</label>
     <input type="text" name="system.accSkill1var" value="{{system.accSkill1var}}" data-dtype="String">
   </div>
   <div class="form-group">
-    <label class="resource-label alternative-stat">Damage Modifiers</label>
+    <label class="resource-label alternative-stat">{{localize "POKEROLE.MoveAttrDmgMod"}}</label>
     <input type="text" name="system.dmgMod1" value="{{system.dmgMod1}}" data-dtype="String">
     <label>/</label>
     <input type="text" name="system.dmgMod1var" value="{{system.dmgMod1var}}" data-dtype="String">
   </div>
   <div class="form-group">
-    <label class="resource-label">Added Effect</label>
+    <label class="resource-label">{{localize "POKEROLE.MoveAttrAddedEffect"}}</label>
     <textarea name="system.effect" data-dtype="String">{{system.effect}}</textarea>
   </div>
 
   <hr>
 
   <div class="form-group">
-    <label class="resource-label">Accuracy Reduction</label>
+    <label class="resource-label">{{localize "POKEROLE.MoveAttrAccuracyReduction"}}</label>
     <input type="text" name="system.attributes.accuracyReduction" value="{{system.attributes.accuracyReduction}}" data-dtype="Number"/>
   </div>
   <div class="form-group">
-    <label class="resource-label">Typeless Maneuver?</label>
+    <label class="resource-label">{{localize "POKEROLE.MoveAttrManeuver"}}</label>
     <input type="checkbox" name="system.attributes.maneuver" {{checked system.attributes.maneuver}} data-dtype="Boolean">
   </div>
   <div class="form-group">
-    <label class="resource-label">Never Fail?</label>
+    <label class="resource-label">{{localize "POKEROLE.MoveAttrNeverFail"}}</label>
     <input type="checkbox" name="system.attributes.neverFail" {{checked system.attributes.neverFail}} data-dtype="Boolean">
   </div>
   <div class="form-group">
-    <label class="resource-label">Ignore Defenses?</label>
+    <label class="resource-label">{{localize "POKEROLE.MoveAttrIgnoreDefenses"}}</label>
     <input type="checkbox" name="system.attributes.ignoreDefenses" {{checked system.attributes.ignoreDefenses}} data-dtype="Boolean">
   </div>
   <div class="form-group">
-    <label class="resource-label">Recoil?</label>
+    <label class="resource-label">{{localize "POKEROLE.MoveAttrRecoil"}}</label>
     <input type="checkbox" name="system.attributes.recoil" {{checked system.attributes.recoil}} data-dtype="Boolean">
   </div>
   <div class="form-group">
-    <label class="resource-label">Special move resisted with defense?</label>
+    <label class="resource-label">{{localize "POKEROLE.MoveAttrResistedWithDefense"}}</label>
     <input type="checkbox" name="system.attributes.resistedWithDefense" {{checked system.attributes.resistedWithDefense}} data-dtype="Boolean">
   </div>
-  
+
 
   <hr>
 
   {{!-- Heal --}}
-  <h3>HP Heal</h3>
+  <h3>{{localize "POKEROLE.MoveHpHeal"}}</h3>
 
   <div class="form-group">
-    <label class="resource-label">Heal Type</label>
+    <label class="resource-label">{{localize "POKEROLE.MoveHealType"}}</label>
     <select name="system.heal.type" value="{{system.heal.type}}" data-dtype="String">
       {{selectOptions healTypes selected=system.heal.type}}
     </select>
@@ -115,14 +115,14 @@
   {{#if healEnabled}}
   {{#unless isLeechHeal}}
   <div class="form-group">
-    <label class="resource-label">Target</label>
+    <label class="resource-label">{{localize "POKEROLE.MoveAttrTarget"}}</label>
     <select name="system.heal.target" value="{{system.heal.target}}" data-dtype="String">
       {{selectOptions effectTargets selected=system.heal.target}}
     </select>
   </div>
 
   <div class="form-group">
-    <label class="resource-label">Will Point Cost</label>
+    <label class="resource-label">{{localize "POKEROLE.MoveHealWillPointCost"}}</label>
     <input type="text" name="system.heal.willPointCost" value="{{system.heal.willPointCost}}" data-dtype="Number"/>
   </div>
   {{/unless}}
@@ -130,14 +130,14 @@
 
   {{#if isCustomHeal}}
   <div class="form-group">
-    <label class="resource-label">Healed HP</label>
+    <label class="resource-label">{{localize "POKEROLE.MoveHealedHp"}}</label>
     <input type="text" name="system.heal.amount" value="{{system.heal.amount}}" data-dtype="Number"/>
   </div>
   {{/if}}
 
   {{#if isLeechHeal}}
   <div class="form-group">
-    <label class="resource-label">Leech Percentage (0.0 - 1.0)</label>
+    <label class="resource-label">{{localize "POKEROLE.MoveLeechPercentage"}}</label>
     <input type="text" name="system.heal.amount" value="{{system.heal.amount}}" data-dtype="Number" min="0" max="1"/>
   </div>
   {{/if}}
@@ -145,7 +145,7 @@
   <hr>
 
   <div class="form-group">
-    <label class="resource-label">Source</label>
+    <label class="resource-label">{{localize "POKEROLE.MoveAttrSource"}}</label>
     <input type="text" name="system.source" value="{{system.source}}" data-dtype="String"/>
   </div>
 </section>

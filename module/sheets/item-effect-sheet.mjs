@@ -34,8 +34,8 @@ export class PokeroleEffectSheet extends PokeroleItemBaseSheet {
    */
   _getTabs() {
     const tabs = [
-      { id: "description", group: "primary", icon: "fa-solid fa-book", label: "Description" },
-      { id: "rules", group: "primary", icon: "fa-solid fa-gears", label: "Rules" }
+      { id: "description", group: "primary", icon: "fa-solid fa-book", label: game.i18n.localize("POKEROLE.TabDescription") },
+      { id: "rules", group: "primary", icon: "fa-solid fa-gears", label: game.i18n.localize("POKEROLE.TabRules") }
     ];
 
     const tabsObject = {};
@@ -54,8 +54,8 @@ export class PokeroleEffectSheet extends PokeroleItemBaseSheet {
 
     // Effect-specific context
     context.operators = {
-      "add": "Add",
-      "replace": "Replace"
+      "add": game.i18n.localize("POKEROLE.EffectOpAdd"),
+      "replace": game.i18n.localize("POKEROLE.EffectOpReplace")
     };
 
     return context;

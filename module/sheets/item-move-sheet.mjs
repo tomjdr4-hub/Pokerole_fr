@@ -65,9 +65,9 @@ export class PokeroleMoveSheet extends PokeroleItemBaseSheet {
    */
   _getTabs() {
     const tabs = [
-      { id: "attributes", group: "primary", icon: "fa-solid fa-list", label: "Attributes" },
-      { id: "description", group: "primary", icon: "fa-solid fa-book", label: "Description" },
-      { id: "effects", group: "primary", icon: "fa-solid fa-bolt", label: "Effects" }
+      { id: "attributes", group: "primary", icon: "fa-solid fa-list", label: game.i18n.localize("POKEROLE.TabAttributes") },
+      { id: "description", group: "primary", icon: "fa-solid fa-book", label: game.i18n.localize("POKEROLE.TabDescription") },
+      { id: "effects", group: "primary", icon: "fa-solid fa-bolt", label: game.i18n.localize("POKEROLE.TabEffects") }
     ];
 
     const tabsObject = {};
@@ -98,12 +98,12 @@ export class PokeroleMoveSheet extends PokeroleItemBaseSheet {
     }
     
     context.effectGroupConditions = {
-      "none": "No condition",
-      "chanceDice": "Chance Dice"
+      "none": game.i18n.localize("POKEROLE.MoveEffectCondNone"),
+      "chanceDice": game.i18n.localize("POKEROLE.MoveEffectCondChance")
     };
     context.moveEffects = {
-      "ailment": "Status Condition",
-      "statChange": "Stat Change",
+      "ailment": game.i18n.localize("POKEROLE.MoveEffectAilment"),
+      "statChange": game.i18n.localize("POKEROLE.MoveEffectStatChange"),
     };
     context.effectAilments = getLocalizedEntriesForSelect('ailments');
     context.effectStats = getLocalizedEntriesForSelect('effectStats');

@@ -31,7 +31,7 @@ export class PokeroleAbilitySheet extends PokeroleItemBaseSheet {
    */
   _getTabs() {
     const tabs = [
-      { id: "description", group: "primary", icon: "fa-solid fa-book", label: "Description" }
+      { id: "description", group: "primary", icon: "fa-solid fa-book", label: game.i18n.localize("POKEROLE.TabDescription") }
     ];
 
     const tabsObject = {};
