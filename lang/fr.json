@@ -217,5 +217,54 @@
   "POKEROLE.TabEffects": "Effets",
   "POKEROLE.TabBiography": "Biographie",
 
-  "POKEROLE.TrainingPoints": "Points d'entraînement"
+  "POKEROLE.TrainingPoints": "Points d'entraînement",
+
+  "POKEROLE.HeaderRank": "Rang",
+  "POKEROLE.HeaderAbility": "Talent",
+  "POKEROLE.HeaderItem": "Objet",
+
+  "POKEROLE.AttrNature": "Nature",
+  "POKEROLE.AttrGender": "Genre",
+  "POKEROLE.AttrRetrain": "Réentraîner",
+  "POKEROLE.AttrQuickReferences": "Références rapides",
+  "POKEROLE.AttrAddAttribute": "Ajouter un attribut...",
+  "POKEROLE.AttrAddSkill": "Ajouter une compétence...",
+
+  "POKEROLE.BioSpecies": "Espèce",
+  "POKEROLE.BioCategory": "Catégorie",
+  "POKEROLE.BioPokedexEntry": "Entrée Pokédex",
+  "POKEROLE.BioHeight": "Taille",
+  "POKEROLE.BioWeight": "Poids",
+  "POKEROLE.BioAbilities": "Talents",
+  "POKEROLE.BioCharacterData": "Données du personnage",
+  "POKEROLE.BioTrait": "Trait",
+  "POKEROLE.BioVitaminA": "Vitamine A",
+  "POKEROLE.BioVitaminB": "Vitamine B",
+
+  "POKEROLE.MovesUsedActions": "Actions utilisées",
+  "POKEROLE.MovesIncrease": "Augmenter",
+  "POKEROLE.MovesClash": "Affrontement",
+  "POKEROLE.MovesEvade": "Esquiver",
+  "POKEROLE.MovesReset": "Réinitialiser",
+  "POKEROLE.MovesTypeCategory": "Type/Catégorie",
+  "POKEROLE.MovesAccuracyPool": "Pool de Précision",
+  "POKEROLE.MovesDamagePool": "Pool de Dégâts",
+  "POKEROLE.MovesTarget": "Cible",
+  "POKEROLE.MovesAdd": "Ajouter",
+  "POKEROLE.MovesOverranked": "Surclassé",
+
+  "POKEROLE.ItemAllItems": "Tous les objets",
+  "POKEROLE.ItemAdd": "Ajouter",
+  "POKEROLE.ItemQuantity": "Quantité",
+  "POKEROLE.ItemInventory": "Inventaire",
+
+  "POKEROLE.EffectsPainPenalization": "Pénalité de douleur",
+  "POKEROLE.EffectsIncreasesReductions": "Augmentations/Réductions",
+  "POKEROLE.EffectsClearNegative": "Effacer (-)",
+  "POKEROLE.EffectsClearPositive": "Effacer (+)",
+  "POKEROLE.EffectsClearAll": "Tout effacer",
+  "POKEROLE.EffectsConditions": "Conditions et Effets",
+  "POKEROLE.EffectsStatusConditions": "Conditions de statut",
+  "POKEROLE.EffectsCustomEffects": "Effets personnalisés",
+  "POKEROLE.EffectsAdd": "Ajouter"
 }

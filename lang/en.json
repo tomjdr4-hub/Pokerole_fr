@@ -217,5 +217,54 @@
   "POKEROLE.TabEffects": "Effects",
   "POKEROLE.TabBiography": "Biography",
 
-  "POKEROLE.TrainingPoints": "Training Points"
+  "POKEROLE.TrainingPoints": "Training Points",
+
+  "POKEROLE.HeaderRank": "Rank",
+  "POKEROLE.HeaderAbility": "Ability",
+  "POKEROLE.HeaderItem": "Item",
+
+  "POKEROLE.AttrNature": "Nature",
+  "POKEROLE.AttrGender": "Gender",
+  "POKEROLE.AttrRetrain": "Retrain",
+  "POKEROLE.AttrQuickReferences": "Quick References",
+  "POKEROLE.AttrAddAttribute": "Add attribute...",
+  "POKEROLE.AttrAddSkill": "Add skill...",
+
+  "POKEROLE.BioSpecies": "Species",
+  "POKEROLE.BioCategory": "Category",
+  "POKEROLE.BioPokedexEntry": "Pokédex Entry",
+  "POKEROLE.BioHeight": "Height",
+  "POKEROLE.BioWeight": "Weight",
+  "POKEROLE.BioAbilities": "Abilities",
+  "POKEROLE.BioCharacterData": "Character Data",
+  "POKEROLE.BioTrait": "Trait",
+  "POKEROLE.BioVitaminA": "A Vitamin",
+  "POKEROLE.BioVitaminB": "B Vitamin",
+
+  "POKEROLE.MovesUsedActions": "Used Actions",
+  "POKEROLE.MovesIncrease": "Increase",
+  "POKEROLE.MovesClash": "Clash",
+  "POKEROLE.MovesEvade": "Evade",
+  "POKEROLE.MovesReset": "Reset",
+  "POKEROLE.MovesTypeCategory": "Type/Category",
+  "POKEROLE.MovesAccuracyPool": "Accuracy Pool",
+  "POKEROLE.MovesDamagePool": "Damage Pool",
+  "POKEROLE.MovesTarget": "Target",
+  "POKEROLE.MovesAdd": "Add",
+  "POKEROLE.MovesOverranked": "Overranked",
+
+  "POKEROLE.ItemAllItems": "All Items",
+  "POKEROLE.ItemAdd": "Add",
+  "POKEROLE.ItemQuantity": "Quantity",
+  "POKEROLE.ItemInventory": "Inventory",
+
+  "POKEROLE.EffectsPainPenalization": "Pain Penalization",
+  "POKEROLE.EffectsIncreasesReductions": "Increases/Reductions",
+  "POKEROLE.EffectsClearNegative": "Clear (-)",
+  "POKEROLE.EffectsClearPositive": "Clear (+)",
+  "POKEROLE.EffectsClearAll": "Clear All",
+  "POKEROLE.EffectsConditions": "Conditions and Effects",
+  "POKEROLE.EffectsStatusConditions": "Status Conditions",
+  "POKEROLE.EffectsCustomEffects": "Custom Effects",
+  "POKEROLE.EffectsAdd": "Add"
 }

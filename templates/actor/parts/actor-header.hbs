@@ -69,7 +69,7 @@
           </div>
           <div class="rank-label-container">
             <div class="internal">
-              <label>Rank</label>
+              <label>{{localize "POKEROLE.HeaderRank"}}</label>
             </div>
           </div>
         </div>
@@ -78,7 +78,7 @@
       <div class="side-slot down-right">
         <div class="internal">
           <div class="item-selector-container">
-            <label for="system.activeAbility">Ability</label>
+            <label for="system.activeAbility">{{localize "POKEROLE.HeaderAbility"}}</label>
             {{#if editable}}
             <select name="system.activeAbility" value="{{system.activeAbility}}" data-dtype="String"
               data-tooltip="{{activeAbilityDescription}}">
@@ -89,7 +89,7 @@
             {{/if}}
           </div>
           <div class="item-selector-container">
-            <label for="system.activeItem">Item</label>
+            <label for="system.activeItem">{{localize "POKEROLE.HeaderItem"}}</label>
             {{#if editable}}
             <select name="system.activeItem" value="{{system.activeItem}}" data-dtype="String"
               data-tooltip="{{activeItemDescription}}">

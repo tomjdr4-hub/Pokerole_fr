@@ -5,7 +5,7 @@
       <span class="number-sign">#</span>
       <input type="text" class="pokedex-num" name="system.pokedexId" value="{{system.pokedexId}}" placeholder="0"
         data-dtype="Number" />
-      <input type="text" name="system.species" value="{{system.species}}" placeholder="Species"
+      <input type="text" name="system.species" value="{{system.species}}" placeholder="{{localize 'POKEROLE.BioSpecies'}}"
         data-dtype="String" />
       {{#unless limitedPermissions}}
       <a data-action="showSettings"><i class="fas fa-cogs"></i></a>
@@ -13,31 +13,31 @@
     </div>
     <div class="pokedex">
       <fieldset>
-        <legend>Category</legend>
-        <input name="system.pokedexCategory" value="{{system.pokedexCategory}}" placeholder="Pokédex Category">
+        <legend>{{localize "POKEROLE.BioCategory"}}</legend>
+        <input name="system.pokedexCategory" value="{{system.pokedexCategory}}" placeholder="{{localize 'POKEROLE.BioCategory'}}">
       </fieldset>
       <fieldset>
-        <legend>Pokédex Entry</legend>
+        <legend>{{localize "POKEROLE.BioPokedexEntry"}}</legend>
         <textarea class="pokedex-description"
           name="system.pokedexDescription">{{ system.pokedexDescription }}</textarea>
       </fieldset>
       <div class="inner-list">
         <fieldset>
-          <legend>Height</legend>
+          <legend>{{localize "POKEROLE.BioHeight"}}</legend>
           <span><input class="small" name="system.height" value="{{system.height}}"> m / {{heightImperial}} ft</span>
         </fieldset>
         <fieldset>
-          <legend>Weight</legend>
+          <legend>{{localize "POKEROLE.BioWeight"}}</legend>
           <span><input class="small" name="system.weight" value="{{system.weight}}"> kg / {{weightImperial}} lbs</span>
         </fieldset>
       </div>
-    </div>  
+    </div>
     {{#unless limitedPermissions}}
     <fieldset class="abilities">
       <legend>
-        Abilities
+        {{localize "POKEROLE.BioAbilities"}}
         {{#if editable}}
-        <a data-action="createItem" title="Create ability" data-type="ability"><i
+        <a data-action="createItem" title="{{localize 'POKEROLE.BioAbilities'}}" data-type="ability"><i
             class="fas fa-plus"></i></a>
         {{/if}}
       </legend>
@@ -47,8 +47,8 @@
           <h5>
             <a data-action="roll" data-roll-type="item">{{item.data.name}}</a>
             {{#if ../editable}}
-            <a data-action="editItem" title="Edit Ability"><i class="fas fa-edit"></i></a>
-            <a data-action="deleteItem" title="Delete Ability"><i class="fas fa-trash"></i></a>
+            <a data-action="editItem" title="{{localize 'POKEROLE.EffectEdit'}}"><i class="fas fa-edit"></i></a>
+            <a data-action="deleteItem" title="{{localize 'POKEROLE.EffectDelete'}}"><i class="fas fa-trash"></i></a>
             {{/if}}
           </h5>
           <p>{{{item.data.system.description}}}</p>
@@ -62,25 +62,25 @@
 
   <div class="species-data">
     <div class="pokedex-number-name">
-      <span class="number-sign">Character Data</span>
+      <span class="number-sign">{{localize "POKEROLE.BioCharacterData"}}</span>
     </div>
 
     <div class="pokedex">
       <fieldset>
-        <legend>Trait</legend>
-        <input type="text" name="system.trait" value="{{system.trait}}" placeholder="None">
+        <legend>{{localize "POKEROLE.BioTrait"}}</legend>
+        <input type="text" name="system.trait" value="{{system.trait}}" placeholder="{{localize 'POKEROLE.HealNone'}}">
       </fieldset>
       {{#if (pkOptions "vitaminOption")}}
       <div class="inner-list">
         <fieldset>
-          <legend>A Vitamin</legend>
+          <legend>{{localize "POKEROLE.BioVitaminA"}}</legend>
           <select name="system.avitamin" value="{{system.avitamin}}" data-dtype="String"
             class="medium clean-selector">
             {{selectOptions addedvitamin selected=system.avitamin}}
           </select>
         </fieldset>
         <fieldset>
-          <legend>B Vitamin</legend>
+          <legend>{{localize "POKEROLE.BioVitaminB"}}</legend>
           <select name="system.bvitamin" value="{{system.bvitamin}}" data-dtype="String"
             class="medium clean-selector">
             {{selectOptions addedvitamin selected=system.bvitamin}}
@@ -92,7 +92,7 @@
 
     {{#unless limitedPermissions}}
     <fieldset class="biography">
-      <legend>Biography</legend>
+      <legend>{{localize "POKEROLE.TabBiography"}}</legend>
       {{> pokerole.multi-editor editing=editingDescription html=biographyHtml key="system.biography" editable=editable}}
     </fieldset>
     {{/unless}}

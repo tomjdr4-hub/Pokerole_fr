@@ -8,11 +8,11 @@
 
     <div class="item-controls">
       {{#if editable}}
-      <a data-action="createItem" title="Create item" data-type="item" class="create-item-link"><i
-          class="fas fa-plus"></i> Add</a>
+      <a data-action="createItem" title="{{localize 'POKEROLE.ItemAdd'}}" data-type="item" class="create-item-link"><i
+          class="fas fa-plus"></i> {{localize "POKEROLE.ItemAdd"}}</a>
       {{/if}}
       <select value="{{system.testvarso}}" name="system.testvarso" data-dtype="String" class="inventoryfilterclass filter-button always-interactive">
-        <option value="all">All Items</option>
+        <option value="all">{{localize "POKEROLE.ItemAllItems"}}</option>
         {{selectOptions customitemdf selected=testvarso labelAttr="catname"}}
       </select>
       <i class="fas fa-bars fa-xl filter-icon"></i>
@@ -28,14 +28,14 @@
         <div class="flexrow">
           <div class="item-name" data-action="togglePocket" data-group="{{key}}">
             {{custom.catname}}</div>
-          <div class="flex-small">Quantity</div>
+          <div class="flex-small">{{localize "POKEROLE.ItemQuantity"}}</div>
           {{#if ../editable}}
           <div class="item-controls control-small"></div>
           {{/if}}
         </div>
         <div class="flexrow">
           <div class="item-name" data-action="togglePocket" data-group="{{key}}"></div>
-          <div class="flex-small">Quantity</div>
+          <div class="flex-small">{{localize "POKEROLE.ItemQuantity"}}</div>
           {{#if ../editable}}
           <div class="item-controls control-small"></div>
           {{/if}}
@@ -53,8 +53,8 @@
           <div class="item-prop flex-small">{{item.data.system.quantity}}</div>
           {{#if ../../editable}}
           <div class="item-controls control-small">
-            <a data-action="editItem" title="Edit Item"><i class="fas fa-edit"></i></a>
-            <a data-action="deleteItem" title="Delete Item"><i class="fas fa-trash"></i></a>
+            <a data-action="editItem" title="{{localize 'POKEROLE.EffectEdit'}}"><i class="fas fa-edit"></i></a>
+            <a data-action="deleteItem" title="{{localize 'POKEROLE.EffectDelete'}}"><i class="fas fa-trash"></i></a>
           </div>
           {{/if}}
         </li>
@@ -66,13 +66,13 @@
     <ul class="items-list">
       <li class="item flexrow items-header" style="border-radius: 10px; gap: 10px">
         <div class="flexrow">
-          <div class="item-name">Inventory</div>
-          <div class="flex-small">Quantity</div>
+          <div class="item-name">{{localize "POKEROLE.ItemInventory"}}</div>
+          <div class="flex-small">{{localize "POKEROLE.ItemQuantity"}}</div>
           <div class="item-controls control-small"></div>
         </div>
         <div class="flexrow">
           <div class="item-name"></div>
-          <div class="flex-small">Quantity</div>
+          <div class="flex-small">{{localize "POKEROLE.ItemQuantity"}}</div>
           <div class="item-controls control-small"></div>
         </div>
       </li>

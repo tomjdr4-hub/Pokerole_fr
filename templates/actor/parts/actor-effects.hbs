@@ -1,18 +1,17 @@
 <section class="tab {{ tab.cssClass }}" data-tab="{{ tab.id }}" data-group="{{ tab.group }}">
   <div class="attribute-col">
     <fieldset class="stat-changes pain">
-      <legend>Pain Penalization</legend>
+      <legend>{{localize "POKEROLE.EffectsPainPenalization"}}</legend>
       <select name="system.painPenalty" class="always-interactive">
         {{selectOptions painPenalties selected=system.painPenalty}}
       </select>
     </fieldset>
     <fieldset class="stat-changes stat-changes-panel">
-      <legend>Increases/Reductions</legend>
+      <legend>{{localize "POKEROLE.EffectsIncreasesReductions"}}</legend>
       <div class="button-container">
-        <button type="button" title="Clear Decreases" data-action="resetNegativeChanges" class="set-button">Clear (-)</button>
-        <button type="button" title="Clear Increases" data-action="resetPositiveChanges" class="set-button">Clear (+)</button>
-        <button type="button" title="Clear Increases/Decreases" data-action="resetStatChanges" class="set-button">Clear
-          All</button>
+        <button type="button" title="{{localize 'POKEROLE.EffectsClearNegative'}}" data-action="resetNegativeChanges" class="set-button">{{localize "POKEROLE.EffectsClearNegative"}}</button>
+        <button type="button" title="{{localize 'POKEROLE.EffectsClearPositive'}}" data-action="resetPositiveChanges" class="set-button">{{localize "POKEROLE.EffectsClearPositive"}}</button>
+        <button type="button" title="{{localize 'POKEROLE.EffectsClearAll'}}" data-action="resetStatChanges" class="set-button">{{localize "POKEROLE.EffectsClearAll"}}</button>
       </div>
       {{#each system.statChanges as |change key|}}
       <div class="statchange">
@@ -61,7 +60,7 @@
             data-key="system.accuracyMod.plus" name="system.accuracyMod.plus" data-dtype="Number">
         </div>
 
-        <label for="system.accuracyMod.value" class="accuracy-label">Accuracy</label>
+        <label for="system.accuracyMod.value" class="accuracy-label">{{localize "POKEROLE.AccuracyMod"}}</label>
 
         <div
           class="icon-and-value split {{#if system.accuracyMod.isPositive}}positive{{/if}}{{#if system.accuracyMod.isNegative}}negative{{/if}}">
@@ -83,10 +82,10 @@
 
   <div class="middle">
     <fieldset class="conditions-panel">
-      <legend>Conditions and Effects</legend>
+      <legend>{{localize "POKEROLE.EffectsConditions"}}</legend>
       <ol class="items-list effects-list">
         <li class="items-header flexrow" data-effect-type="{{section.type}}">
-          <h3 class="item-name flexrow">Status Conditions</h3>
+          <h3 class="item-name flexrow">{{localize "POKEROLE.EffectsStatusConditions"}}</h3>
           <div class="quick-ailment-list">
             {{#each quickAilmentList as |ailment|}}
             {{#if ailment.buttonDisabled}}
@@ -112,7 +111,7 @@
           </div>
           <div class="item-prop">{{ailment.description}}</div>
           <div class="item-controls">
-            <a data-action="removeAilment" title="Remove Ailment" data-ailment="{{ailment.type}}">
+            <a data-action="removeAilment" title="{{localize 'POKEROLE.EffectDelete'}}" data-ailment="{{ailment.type}}">
               <i class="fas fa-trash"></i>
             </a>
           </div>
@@ -122,12 +121,12 @@
 
       <ol class="items-list effects-list">
         <li class="items-header flexrow" data-effect-type="{{section.type}}">
-          <h3 class="item-name flexrow">Custom Effects</h3>
+          <h3 class="item-name flexrow">{{localize "POKEROLE.EffectsCustomEffects"}}</h3>
           {{#if editable}}
           <div class="item-controls centered">
-            <a data-action="createItem" title="Create effect" data-type="effect"><i class="fas fa-plus"></i>
-              Add</a>
-          </div>          
+            <a data-action="createItem" title="{{localize 'POKEROLE.EffectsAdd'}}" data-type="effect"><i class="fas fa-plus"></i>
+              {{localize "POKEROLE.EffectsAdd"}}</a>
+          </div>
           {{/if}}
         </li>
 
@@ -141,15 +140,15 @@
             <h4>{{effect.data.name}}</h4>
           </div>
           <div class="item-controls centered">
-            <a data-action="toggleVisible" title="Toggle visibility">
+            <a data-action="toggleVisible" title="{{localize 'POKEROLE.EffectToggle'}}">
               <i class="fas {{#if effect.data.system.visible}}fa-eye{{else}}fa-eye-slash{{/if}}"></i>
             </a>
-            <a data-action="toggleEffectEnabled" title="Toggle effect">
+            <a data-action="toggleEffectEnabled" title="{{localize 'POKEROLE.EffectToggle'}}">
               <i class="fas {{#if effect.data.system.enabled}}fa-toggle-on{{else}}fa-toggle-off{{/if}}"></i>
             </a>
             {{#if ../editable}}
-            <a data-action="editItem" title="Edit Effect"><i class="fas fa-edit"></i></a>
-            <a data-action="deleteItem" title="Remove Effect">
+            <a data-action="editItem" title="{{localize 'POKEROLE.EffectEdit'}}"><i class="fas fa-edit"></i></a>
+            <a data-action="deleteItem" title="{{localize 'POKEROLE.EffectDelete'}}">
               <i class="fas fa-trash"></i>
             </a>
             {{/if}}

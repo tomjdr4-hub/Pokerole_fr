@@ -57,7 +57,7 @@
       {{/each}}
       {{#if editable}}
       <div class="add-custom-value custom-attribute">
-        <input type="text" class="add-value-input" placeholder="Add attribute..." data-dtype="Number" />
+        <input type="text" class="add-value-input" placeholder="{{localize 'POKEROLE.AttrAddAttribute'}}" data-dtype="Number" />
         <a data-action="addCustomAttribute" title="Create attribute"><i class="fas fa-plus"></i></a>
       </div>
       {{/if}}
@@ -83,7 +83,7 @@
       {{/each}}
       {{#if editable}}
       <div class="add-custom-value custom-skill">
-        <input type="text" class="add-value-input" placeholder="Add skill..." data-dtype="Number" />
+        <input type="text" class="add-value-input" placeholder="{{localize 'POKEROLE.AttrAddSkill'}}" data-dtype="Number" />
         <a data-action="addCustomSkill" title="Create skill"><i class="fas fa-plus"></i></a>
       </div>
       {{/if}}
@@ -124,14 +124,14 @@
     <div class="nature-box battle-nature-wrap">
       {{#if (pkOptions "genderOption")}}
         <div class="attribute">
-          <label for="system.gender" class="resource-label flexlarge align-left">Gender</label>
+          <label for="system.gender" class="resource-label flexlarge align-left">{{localize "POKEROLE.AttrGender"}}</label>
           <select name="system.gender" value="{{system.gender}}" data-dtype="String" class="large">
             {{selectOptions gender selected=system.gender}}
           </select>
         </div>
         {{/if}}
       <div class="attribute">
-        <label for="system.personality" class="resource-label flexlarge align-left">Nature</label>
+        <label for="system.personality" class="resource-label flexlarge align-left">{{localize "POKEROLE.AttrNature"}}</label>
         <select name="system.personality" value="{{system.personality}}" data-dtype="String" class="large">
           {{selectOptions natures selected=system.personality}}
         </select>
@@ -143,11 +143,11 @@
     </div>
 
     <div class="button-container">
-      <button type="button" title="Retrain" data-action="reTrain" class="set-button">Retrain</button>
+      <button type="button" title="{{localize 'POKEROLE.AttrRetrain'}}" data-action="reTrain" class="set-button">{{localize "POKEROLE.AttrRetrain"}}</button>
     </div>
 
     <div class="derived">
-      <h3 class="section-header centered">Quick References</h3>
+      <h3 class="section-header centered">{{localize "POKEROLE.AttrQuickReferences"}}</h3>
       <div class="derived-attributes">
         {{#each system.derived as |attribute key|}}
         <div class="attribute">

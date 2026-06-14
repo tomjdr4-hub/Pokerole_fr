@@ -1,28 +1,28 @@
 <section class="tab {{ tab.cssClass }}" data-tab="{{ tab.id }}" data-group="{{ tab.group }}">
   <div class="combat-resources" >
     <div class="action-count">
-      <label for="system.actionCount.value">Used Actions: </label>
+      <label for="system.actionCount.value">{{localize "POKEROLE.MovesUsedActions"}} : </label>
       <div class="input-group">
         <input type="text" name="system.actionCount.value" value="{{system.actionCount.value}}" data-dtype="Number" class="always-interactive">
         <span> / {{system.actionCount.max}}</span>
       </div>
-      <button type="button" title="Increment action count" data-action="incrementActions" {{#unless hasAvailableActions}}disabled{{/unless}}>
-        <i class="fas fa-plus"></i><label>Increase</label>
+      <button type="button" title="{{localize 'POKEROLE.MovesIncrease'}}" data-action="incrementActions" {{#unless hasAvailableActions}}disabled{{/unless}}>
+        <i class="fas fa-plus"></i><label>{{localize "POKEROLE.MovesIncrease"}}</label>
       </button>
     </div>
 
     <div class="clash-evade" >
       <button type="button" data-action="toggleCanClash" class="{{#unless system.canClash}}translucent{{/unless}}">
         <i class="{{#unless system.canClash}}fas fa-circle-xmark{{else}}fa-regular fa-circle{{/unless}}"></i>
-        <label>Clash ( {{system.derived.clashPhysical.value}} /  {{system.derived.clashSpecial.value}} )</label>
+        <label>{{localize "POKEROLE.MovesClash"}} ( {{system.derived.clashPhysical.value}} /  {{system.derived.clashSpecial.value}} )</label>
       </button>
       <button type="button" data-action="toggleCanEvade" class="{{#unless system.canEvade}}translucent{{/unless}}">
         <i class="{{#unless system.canEvade}}fas fa-circle-xmark{{else}}fa-regular fa-circle{{/unless}}"></i>
-        <label>Evade ({{system.derived.evade.value}})</label>
+        <label>{{localize "POKEROLE.MovesEvade"}} ({{system.derived.evade.value}})</label>
       </button>
     </div>
 
-    <button type="button" title="Reset resources" data-action="resetRoundResources">Reset</button>
+    <button type="button" title="{{localize 'POKEROLE.MovesReset'}}" data-action="resetRoundResources">{{localize "POKEROLE.MovesReset"}}</button>
   </div>
 
   <div class="Geoboxer">
@@ -30,13 +30,13 @@
       <ul class="items-list move-group">
         <li class="item flexrow items-header{{#if moves.hidden}} translucent{{/if}}">
           <a class="item-name" data-action="toggleMoveGroup" data-group="{{key}}">{{moves.groupName}}</a>
-          <div>Type/Category</div>
-          <div>Accuracy Pool</div>
-          <div>Damage Pool</div>
-          <div>Target</div>
+          <div>{{localize "POKEROLE.MovesTypeCategory"}}</div>
+          <div>{{localize "POKEROLE.MovesAccuracyPool"}}</div>
+          <div>{{localize "POKEROLE.MovesDamagePool"}}</div>
+          <div>{{localize "POKEROLE.MovesTarget"}}</div>
           <div class="item-controls centered">
             {{#if ../editable}}
-            <a data-action="createItem" title="Create move" data-type="move" data-rank="{{key}}"><i class="fas fa-plus"></i>Add</a>
+            <a data-action="createItem" title="{{localize 'POKEROLE.MovesAdd'}}" data-type="move" data-rank="{{key}}"><i class="fas fa-plus"></i>{{localize "POKEROLE.MovesAdd"}}</a>
             {{/if}}
           </div>
         </li>
@@ -55,7 +55,7 @@
             </div>
             <div class="item-prop">{{item.locType}} ({{item.locCategory}})</div>
             <div class="item-prop">{{item.data.system.accAttr1}}{{#if item.data.system.accAttr1var}}{{#if item.data.system.accAttr1}}/{{/if}}{{item.data.system.accAttr1var}}{{/if}}{{#if item.data.system.accSkill1}} + {{item.data.system.accSkill1}}{{/if}}{{#if item.data.system.accSkill1var}}{{#if item.data.system.accSkill1}}/{{else}} + {{/if}}{{item.data.system.accSkill1var}}{{/if}} (<b>{{item.accuracyPool}}</b>)</div>
-            
+
             <div class="item-prop">
                 {{#if item.dmgPool}}{{item.data.system.dmgMod1}}{{/if}}{{#if item.data.system.dmgMod1var}}{{#if item.data.system.dmgMod1}}/{{/if}}{{item.data.system.dmgMod1var}}{{/if}}{{#if item.data.system.power}} +{{item.data.system.power}}{{/if}}
                 {{#if item.dmgPool}}(<b>{{item.dmgPool}}</b>){{/if}}
@@ -66,7 +66,7 @@
               {{#if ../../editable}}
               {{#unless item.data.system.attributes.maneuver}}
                 {{#if item.data.system.learned}}
-                  <a data-action="toggleMoveOverrank" title="Toggle Overranked Status">
+                  <a data-action="toggleMoveOverrank" title="{{localize 'POKEROLE.MovesOverranked'}}">
                     <i class="{{#if item.data.system.overrank}}fa-solid fa-star{{else}}fa-regular fa-star{{/if}}"></i>
                   </a>
                 {{/if}}
@@ -74,11 +74,11 @@
                 <i class="fas {{#if item.data.system.learned}}fa-times{{else}}fa-check{{/if}}"></i>
               </a>
               {{/unless}}
-              <a data-action="editItem" title="Edit Item"><i class="fas fa-edit"></i></a>
-              <a data-action="deleteItem" title="Delete Item"><i class="fas fa-trash"></i></a>
+              <a data-action="editItem" title="{{localize 'POKEROLE.EffectEdit'}}"><i class="fas fa-edit"></i></a>
+              <a data-action="deleteItem" title="{{localize 'POKEROLE.EffectDelete'}}"><i class="fas fa-trash"></i></a>
               {{else}}
               {{#if item.data.system.overrank}}
-              <i class="fa-solid fa-star" title="Overranked"></i>
+              <i class="fa-solid fa-star" title="{{localize 'POKEROLE.MovesOverranked'}}"></i>
               {{/if}}
               {{/if}}
             </div>
