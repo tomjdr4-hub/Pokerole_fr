@@ -1,0 +1,24 @@
+# IDE
+.idea/
+.vs/
+
+# Node Modules
+node_modules/
+npm-debug.log
+
+# Foundry
+*.lock
+jsconfig.json
+foundry
+packs/abilities/
+packs/moves/
+packs/pokedex/
+packs/items/
+packs/macros/
+
+css/
+images/pokemon/
+images/items/
+
+# Other
+.DS_Store

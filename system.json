@@ -1,0 +1,101 @@
+{
+  "id": "pokerole",
+  "title": "Pokérole",
+  "description": "FoundryVTT system for Pokérole, the Pokémon role-playing game.",
+  "version": "0.6.0",
+  "compatibility": {
+    "minimum": 13,
+    "verified": "14",
+    "maximum": 14
+  },
+  "authors": [
+    {
+      "name": "techticks"
+    },
+    {
+      "name": "Axorum",
+      "url": "https://github.com/Axorum"
+    }
+  ],
+  "esmodules": [
+    "module/pokerole.mjs"
+  ],
+  "styles": [
+    "css/pokerole.css"
+  ],
+  "scripts": [],
+  "packs": [
+    {
+      "name": "pokemon",
+      "label": "Pokémon (Core 3.0)",
+      "system": "pokerole",
+      "path": "./packs/pokedex.db",
+      "type": "Actor"
+    },
+    {
+      "name": "moves",
+      "label": "Moves (Core 3.0)",
+      "system": "pokerole",
+      "path": "./packs/moves.db",
+      "type": "Item"
+    },
+    {
+      "name": "abilities",
+      "label": "Abilities (Core 3.0)",
+      "system": "pokerole",
+      "path": "./packs/abilities.db",
+      "type": "Item"
+    },
+    {
+      "name": "items",
+      "label": "Items (Core 3.0)",
+      "system": "pokerole",
+      "path": "./packs/items.db",
+      "type": "Item"
+    },
+    {
+      "name": "macros",
+      "label": "POKEROLE Macros",
+      "system": "pokerole",
+      "path": "./packs/macros.db",
+      "type": "Macro"
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "POKEROLE 3.0 Compendium",
+      "sorting": "m",
+      "color": "#841722",
+      "packs": [
+        "pokemon",
+        "moves",
+        "abilities",
+        "items",
+        "macros"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "fr",
+      "name": "Français",
+      "path": "lang/fr.json"
+    }
+  ],
+  "grid": {
+    "distance": 2.5,
+    "units": "ft"
+  },
+  "primaryTokenAttribute": "hp",
+  "secondaryTokenAttribute": "will",
+  "url": "https://github.com/tomjdr4-hub/Pokerole_fr",
+  "manifest": "https://raw.githubusercontent.com/tomjdr4-hub/Pokerole_fr/main/system.json",
+  "download": "https://github.com/tomjdr4-hub/Pokerole_fr/releases/latest/download/pokerole-fr.zip",
+  "license": "LICENSE.txt",
+  "changelog": "CHANGELOG.md"
+}
