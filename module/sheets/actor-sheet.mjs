@@ -216,7 +216,14 @@ export class PokeroleActorSheet extends foundry.applications.api.HandlebarsAppli
 
   /** @override */
   async _prepareContext(options) {
-    const context = await super._prepareContext(options);
+    let context;
+    try {
+      context = await super._prepareContext(options);
+    } catch (e) {
+      console.error(`[Pokérole] Error in super._prepareContext for actor "${this.actor?.name}":`, e);
+      throw e;
+    }
+    try {
 
     // Add actor data to context
     context.actor = this.actor;
@@ -308,6 +315,10 @@ export class PokeroleActorSheet extends foundry.applications.api.HandlebarsAppli
     context.limitedPermissions = this.actor.testUserPermission(game.user, CONST.DOCUMENT_OWNERSHIP_LEVELS.LIMITED, { exact: true });
 
     return context;
+    } catch (e) {
+      console.error(`[Pokérole] Error in _prepareContext for actor "${this.actor?.name}" (pack: ${this.document.pack}):`, e);
+      throw e;
+    }
   }
 
   /**
@@ -550,13 +561,15 @@ export class PokeroleActorSheet extends foundry.applications.api.HandlebarsAppli
       // Append to moves.
       else if (i.type === 'move') {
         if (i.system.rank == undefined) {
-          await this.actor.updateEmbeddedDocuments('Item', [{
-            _id: i._id,
-            'system.rank': 'starter',
-            'system.learned': true,
-          }]);
+          if (!this.document.pack) {
+            await this.actor.updateEmbeddedDocuments('Item', [{
+              _id: i._id,
+              'system.rank': 'starter',
+              'system.learned': true,
+            }]);
+          }
           // The changes above also have to be applied manually because the object
-          // doesn't update automatically.
+          // doesn't update automatically (or if the actor is in a compendium).
           i.system.rank = 'starter';
           i.system.learned = true;
         }

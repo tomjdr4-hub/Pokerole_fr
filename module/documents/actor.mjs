@@ -630,7 +630,7 @@ export class PokeroleActor extends Actor {
       throw new Error(`Unknown stat '${stat}'`);
     }
 
-    const currentValue = getProperty(this, key) ?? 0;
+    const currentValue = foundry.utils.getProperty(this, key) ?? 0;
 
     // Check if the signs of current value and amount are different
     if ((currentValue < 0 && amount > 0) || (currentValue > 0 && amount < 0)) {
